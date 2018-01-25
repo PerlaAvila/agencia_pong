@@ -127,12 +127,14 @@
         <div class="col-md-6" style="margin: auto; padding: 10% 10% 0 5%;">
           <!-- multistep form -->
           <form id="msform" class="msform" role="form" action="form-handler-nodb.php" method="POST">
-            <p class="fs-title">Cuéntanos quién eres...</p>
-              <input type="text" name="name" id="nameUno"  placeholder="Me llamo...">
-            <p class="fs-title">Por qué medio prefieres que nos comuniquemos contigo...</p>
-              <input type="text" name="medio" id="medioUno"  placeholder="Tel, mail, whats..">  
-            <p class="fs-title">En qué podemos ayudarte...</p>
-              <textarea name="que" id="queUno"  placeholder="Tel, mail, whats..">  </textarea>
+            <p class="fs-title">Nombre</p>
+              <input type="text" name="name" id="nameUno" required>
+            <p class="fs-title">Email</p>
+              <input type="email" name="email" id="mailUno" required>  
+            <p class="fs-title">Teléfono</p>
+              <input type="text" name="phone" id="phoneUno">    
+            <p class="fs-title">Mensaje</p>
+              <textarea name="message" id="queUno">  </textarea>
             <input type="submit" name="submit" class="submit link-green action-button" style="border-bottom: none;" value="Enviar" />
           </form><!-- form-->
           <div class="thanks"></div>
@@ -488,12 +490,14 @@ ix:{value:t.ix},mn:{value:t.mn}}),s}return function(e,i,r){function s(t){if("num
                   
               <div class="col-md-7">
                 <form id="msformUno" class="msform" role="form" action="form-handler-nodb.php" method="POST">
-                  <p class="fs-title">Cuéntanos quién eres...</p>
-                    <input type="text" name="name" id="name"  placeholder="Me llamo...">
-                  <p class="fs-title">Por qué medio prefieres que nos comuniquemos contigo...</p>
-                    <input type="text" name="medio" id="medio"  placeholder="Tel, mail, whats..">  
-                  <p class="fs-title">En qué podemos ayudarte...</p>
-                    <textarea name="que" id="que"  placeholder="Tel, mail, whats..">  </textarea>
+                  <p class="fs-title">Nombre</p>
+                    <input type="text" name="name" id="name" required>
+                  <p class="fs-title">Email</p>
+                    <input type="email" name="email" id="email" required>  
+                  <p class="fs-title">Teléfono</p>
+                    <input type="text" name="phone" id="phone">    
+                  <p class="fs-title">Mensaje</p>
+                    <textarea name="message" id="que">  </textarea>
                   <input type="submit" name="submit" class="submit link-green action-button" style="border-bottom: none;" value="Enviar" />
                 </form><!-- form-->
               </div><!-- col -->

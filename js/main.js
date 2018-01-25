@@ -21,18 +21,26 @@ $(document).ready(function(){
 
 
 	
-$(".submit").click(function(){
-    $("#msform, #msformUno").fadeOut('slow');
-	$.ajax({
+$(".msform").submit(function(e){
+
+    $.ajax({
         url: "form-handler-nodb.php",
-        method: "post",
+        type: "POST",
         data: $(".msform").serialize(),
-        success: function(r){
+        success: function(r)
+        {
+            console.log(r);
+            if(r){
+                $(".msform").fadeOut('slow') && $(".thanks").text("Gracias por contactarnos, te responderemos a la brevedad :)");
+            }else{
+                $(".thanks").text("Inténtalo de nuevo");
+            }
         }
     });  
-    $(".thanks").text("Gracias por contactarnos, te responderemos a la brevedad :)");
+    
     return false; // this one
 });
+
 
 
 // slider

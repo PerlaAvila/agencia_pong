@@ -14,23 +14,24 @@ $(document).ready(function(){
          $('#overlay').removeClass('open');
     });
 
-
-     $('#Carousel').carousel({
-        interval: 5000
-    });
-
-
 	
-$(".submit").click(function(){
-    $("#msform, #msformUno").fadeOut('slow');
+$("#msformDos").submit(function(e){
+
 	$.ajax({
         url: "form-handler-nodb.php",
-        method: "post",
-        data: $(".msform").serialize(),
-        success: function(r){
+        type: "POST",
+        data: $("#msformDos").serialize(),
+        success: function(r)
+        {
+            console.log(r);
+            if(r){
+                $("#msformDos").fadeOut('slow') && $(".thanks").text("Gracias por contactarnos, te responderemos a la brevedad :)");
+            }else{
+                $(".thanks").text("Inténtalo de nuevo");
+            }
         }
     });  
-    $(".thanks").text("Gracias por contactarnos, te responderemos a la brevedad :)");
+    
     return false; // this one
 });
 

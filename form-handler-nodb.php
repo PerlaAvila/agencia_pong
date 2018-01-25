@@ -1,16 +1,33 @@
 <?php
+$db = mysqli_connect("localhost", "pong_mensajes", "pong1234", "pong_mensajes");
+ 
+// Check connection
+if($db === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
 
 $to = "perla@pong.com.mx";
-$subject = "Nuevo correo para ti";
+$subject = "Nuevo correo para PONG";
 $subject1 = "Recibimos tus datos";
 $from = "ping@pong.com.mx";
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone']
-$que = $_POST['que'];
+$name = mysqli_real_escape_string($db, $_POST['name']);
+$email = mysqli_real_escape_string($db, $_POST['email']);
+$phone = mysqli_real_escape_string($db, $_POST['phone']);
+$msj = mysqli_real_escape_string($db, $_POST['message']);
 
 
- $headers = "From: Nuevo correo de PONG\r\n";
+$sql = "INSERT INTO datos_cliente (name,phone,email,message) VALUES ('$name','$phone','$email','$msj')";
+if(mysqli_query($db, $sql)){
+    echo "Records added successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
+}
+ 
+// close connection
+mysqli_close($db);
+
+ $headers = "From: " . strip_tags($email) . "\r\n";
   $headers .= "Reply-To: ". strip_tags($email) . "\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
@@ -26,8 +43,9 @@ $que = $_POST['que'];
 $message = '<html><body>';
 $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
 $message .= "<tr style='background: #eee;'><td><strong>Nombre:</strong> </td><td>" . strip_tags($name) . "</td></tr>";
-$message .= "<tr><td><strong>Contacto:</strong> </td><td>" . strip_tags($email) . "</td></tr>";
-$message .= "<tr style='background: #eee;'><td><strong>Qué necesita</strong> </td><td>" . strip_tags($que) . "</td></tr>";
+$message .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($email) . "</td></tr>";
+$message .= "<tr style='background: #eee;'><td><strong>Teléfono:</strong> </td><td>" . strip_tags($phone) . "</td></tr>";
+$message .= "<tr><td><strong>Qué necesita</strong> </td><td>" . strip_tags($msj) . "</td></tr>";
 $message .= "</body></html>";
 
 

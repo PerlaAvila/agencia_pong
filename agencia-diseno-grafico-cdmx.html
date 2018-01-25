@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Experimentos</title>
+	<title>PONG | Agencia de Marketing Digital en la Ciudad de México</title>
 	<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,7 +31,7 @@
 <body id="body">
   <div class="navbars">
         <div style="padding: 20px; z-index: 6;">
-          <img class="img-fluid" src="img/logo-pong.png" >
+          <a href="/"><img class="img-fluid" src="img/logo-pong.png" ></a>
         </div>
         <div class="button_container" id="toggle">
           <p class="boton">contacto</p>
@@ -95,16 +95,18 @@
           </script><!-- script para activar la animación -->
         </div> <!-- col -->
         <div class="col-md-6" style="margin: auto; padding: 10% 10% 0 5%;">
+        
           <!-- multistep form -->
-          <form id="msform" class="msform" role="form" action="form-landing-nodb.php" method="POST">
-            <p class="fs-title">Nombre</p>
-              <input type="text" name="name" id="name" required >
-            <p class="fs-title">Email</p>
-              <input type="text" name="email" id="email" required  >  
-            <p class="fs-title">Teléfono</p>
-              <input type="text" name="phone" id="phone">
-            <p class="fs-title">En qué podemos ayudarte...</p>
-              <textarea name="que" id="que"  placeholder="Tel, mail, whats..">  </textarea>
+          <form id="msformDos" class="msform" role="form" action="form-handler-nodb.php" method="POST">
+          <p id="error" style="color: red;font-size: 20px;"></p>
+            <p class="fs-title">Nombre:</p>
+              <input type="text" name="name" id="name" class="name" required>
+            <p class="fs-title">Email:</p>
+              <input type="email" name="email" id="email" class="email"  required>  
+            <p class="fs-title">Teléfono:</p>
+              <input type="text" name="phone" id="phone" class="phone">
+            <p class="fs-title">Mensaje:</p>
+              <textarea name="message" id="que" class="mensaje">  </textarea>
             <input type="submit" name="submit" class="submit link-green action-button" style="border-bottom: none;" value="Enviar" />
           </form><!-- form-->
           <div class="thanks"></div>
@@ -140,7 +142,7 @@
       </div><!-- col -->
       <div class="col-lg-4">
         <img src="img/landing/servicio.png" class="img-fluid iconos">
-        <h2 class="sub-black">Servicios</h2>
+        <h2 class="sub-black">Servicio</h2>
         <p>Nos gusta que nuestros clientes<br>
           hablen bien de nosotros.<br>
           Trabajamos hasta lograr<br>
