@@ -1,0 +1,217 @@
+<head>
+    <title>PONG</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../img/favicon.png" rel="shortcut icon" type="image/png" />
+    <meta name="description" content=""/>
+    <!-- nuestra hoja de estilos -->
+    <link href="proyectos.css" rel="stylesheet" type="text/css" />
+    <!-- bootstrap (diseño responsivo)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- jQuery framework para Javascript-->
+    <script src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- lazy load -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.5.2/lazyload.min.js"></script>
+    <!-- animaciones -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js "></script>
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,800,900" rel="stylesheet">
+    <script type="text/javascript" src="../js/proyectos.js"></script>
+  </head>
+  <body>
+    <div class="navbars">
+        <div style="padding: 20px;">
+          <a href="../">
+            <img class="img-fluid" src="../img/logo-pong.png">
+          </a>
+        </div>
+        <div class="button_container" id="toggle">
+          <p id="me" class="me">Contacto</p>
+          <p id="er" class="er">x</p>
+        </div><!-- button_cont -->
+    </div> <!-- navbars-->   
+      <div class="overlay row" id="overlay">
+        <div class="col-md-6" >
+          <div class="frame">
+            <div class="loader">
+              <div class="loader-ring">
+              </div><!-- loader ting -->
+              <div class="rocket-wrapper">
+                <div class="trail-wrapper">
+                  <img src="../img/fuego.png" alt="" class="trail" />
+                </div>
+                  <img src="../img/cohete.png" alt="" class="rocket" />
+              </div><!-- rocket_wrapper -->
+              <div class="clouds-wrapper">
+                <svg class="clouds" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 90.83">
+                  <defs>
+                    <clipPath id="clip-path" transform="translate(1.75)">
+                      <circle cx="42.5" cy="42.5" r="42.5" fill="none" />
+                    </clipPath><!-- clipath -->
+                    <filter id="goo" color-interpolation-filters="sRGB">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -11" result="goo" />
+                      <feBlend in="SourceGraphic" in2="goo" />
+                    </filter><!-- filter -->
+                    <filter id="blurMe">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="0.9" />
+                    </filter><!-- filter -->
+                  </defs><!-- defs -->
+                  <g clip-path="url(#clip-path)" fill="blue" filter="url(#goo)">
+                    <g class="clouds-wrapper" filter="url(#blurMe)">
+                      <ellipse class="cloud" cx="40" cy="61.83" rx="7" ry="7" />
+                      <ellipse class="cloud" cx="81" cy="68.83" rx="8" ry="8" />
+                      <ellipse class="cloud" cx="6" cy="63.83" rx="6" ry="6"/>
+                      <ellipse class="cloud" cx="15" cy="70.83" rx="11" ry="11"  />
+                      <ellipse class="cloud" cx="65" cy="74.83" rx="11" ry="11"  />
+                      <ellipse class="cloud" cx="48" cy="71.83" rx="14" ry="14" />
+                      <ellipse class="cloud" cx="34" cy="75.83" rx="16" ry="16" />
+                    </g><!--g -->
+                  </g><!-- g-->
+                </svg><!-- svg-->
+              </div><!-- clouds -->
+            </div><!-- loader -->
+          </div><!-- frame-->
+          <script type="text/javascript">
+            var tl = new TimelineMax({repeat: -1, repeatDelay: 0});
+
+            tl.from('.cloud', 1, {alpha: 0})
+              .to('.rocket-wrapper', 3, { y: -400, ease:Expo.easeIn })
+              .to('.cloud', 3, { attr:{ cy: 185}, ease:Expo.easeIn }, "-=3")
+              .set('.cloud', {clearProps:"all"})
+              .set('.rocket-wrapper', { y: 450 })
+              .to('.rocket-wrapper', 4, { y:0, ease:Elastic.easeOut.config(0.5, 0.4) })
+              .to('.trail-wrapper', 2.5, { scaleX:0.5, scaleY:0, alpha:0, ease:Expo.easeOut }, "-=2.0")
+
+              console.log('exito');
+          </script><!-- script para activar la animación -->
+        </div> <!-- col -->
+        <div class="col-md-6" style="margin: auto;">
+          <!-- multistep form -->
+          <form id="msforms" role="form" action="form-handler.php" method="POST">
+            <fieldset>
+              <h2 class="fs-title">Cuéntanos quién eres</h2>
+                <input type="text" name="name" id="name"  placeholder="Me llamo...">
+              <p>Tengo un proyecto para...</p>
+              <div style="display: flex;">
+                <input class="options" id="empresa" type="checkbox" name="empresa" value="mi empresa"><label for="empresa">empresa</label><br>
+                <input class="options" id="personal" type="checkbox" name="personal" value="Personal"><label for="personal">Personal</label><br>
+              </div>
+                <input type="button" name="next" class="next action-button" value="Next " />
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Qué tan listo está tu proyecto?</h2>
+              <div style="display: grid;">
+                  <input class="options" id="listo" type="checkbox" name="listo" value="Está listo"><label for="listo">Está listo </label><br>
+                  <input class="options" id="idea" type="checkbox" name="idea" value="Tengo una idea"><label for="idea">Tengo una idea</label><br>
+                  <input class="options" id="perdido" type="checkbox" name="ayuda" value="Estoy perdido"><label for="perdido">¡¡¡AYUDA!!!</label><br>
+              </div>
+              <input type="button" name="previous" class="previous action-button" value=" Previous" />
+              <input type="button" name="next" class="next action-button" value="Next " />
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Información de contacto</h2>
+              <p>Por qué medio prefieres que nos comuniquemos contigo</p>
+              <input type="text" name="phone" placeholder="Teléfono" />
+              <input type="email" name="email" placeholder="Email">
+              <input type="button" name="previous" class="previous action-button" value=" Previous" />
+              <input type="submit" id="submt" name="submit" class="submt action-button" value="Submit" style="background-color: #544eff;" />
+            </fieldset>
+          </form><!-- form-->
+          <div id="thanks"></div>
+        </div> <!--col  -->
+        </div><!-- overlay -->
+
+
+    <div class="container-fluid modal-contents" style="padding: 0;">
+    </div><!-- container-fluid--> 
+      <div class="container-fluid back" style="background-image: url('../img/habitia/fondeque.png');"> 
+        
+        <div class="row justify-content-center">
+          <div class="col-12" style="padding: 10%;text-align: center;">
+            <img src="../img/habitia/habitia-dark.png" class="img-fluid logo-brand" />
+          </div><!-- col -->
+          <div class="col-md-8 col-md-offset-2">
+            <div class="description" id="description">
+              <h2 class="title-proyect">Habitia</h2>
+              <h4 class="blue-title">Identidad corportiva</h4>
+            </div><!-- nonames-->
+          </div><!-- col -->
+
+          <div class="col-md-8 col-md-offset-2">
+            <div class="row description" id="description" style="margin-top: 5vh;">
+              <div class="col-md-6">
+                <h5 class="h5">fecha</h5>
+                <p class="parrafo">2016, marzo</p>
+                <h5 class="h5">objetivo</h5>
+                <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus bibendum lectus.</p>
+              </div>
+              <div class="col-md-6">
+                 <h5 class="h5">solución</h5>
+                <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus bibendum lectus. In mattis facilisis quam, at porta lectus volutpat in. Praesent sollicitudin justo ac nisi vestibulum vestibulum. </p>
+              </div>  
+            </div><!-- nonames-->
+          </div><!-- col -->
+
+        <h3 class="proyect-title">
+          Logotipos
+        </h3>
+          <div class="row">
+            <div class="col-md-4 pic">
+              <h5 class="exp" style="color: #c08c79;">imagotipo</h5>
+              <img src="../img/habitia/logo-habitia-dark.png" class="img-fluid">
+            </div><!-- col --> 
+            <div class="col-md-4 pic">
+              <h5 class="exp" style="color: #c08c79;">isotipo</h5>
+              <img src="../img/habitia/isotipo.png" class="img-fluid">
+            </div><!-- col --> 
+            <div class="col-md-4 pic">
+              <h5 class="exp" style="color: #c08c79;">logotipo</h5>
+              <img src="../img/habitia/logotipo-habitia.png" class="img-fluid">
+            </div><!-- col --> 
+          </div>  
+          <div class="col-md-12" style="text-align: center; margin: 5%;">
+            <img src="https://pong.com.mx/prueba/sitiopong/img/habitia/Habitia_identidad.gif" class="img-fluid">
+          </div>
+           <h3 class="proyect-title">
+            Iconografía
+          </h3>
+          <div class="row">
+            <div class="col-md-3">
+              <img src="../img/habitia/iconos-1.png" class="img-fluid">
+            </div><!-- col -->
+            <div class="col-md-3">
+              <img src="../img/habitia/iconos-2.png" class="img-fluid">
+            </div><!-- col -->
+            <div class="col-md-3">
+              <img src="../img/habitia/iconos-3.png" class="img-fluid">
+            </div><!-- col -->
+            <div class="col-md-3">
+              <img src="../img/habitia/iconos-4.png" class="img-fluid">
+            </div><!-- col -->
+          </div>
+          <div class="col-md-12" style="background-color: #808B96; margin-top: 10vh;">
+            <h3 class="proyect-title" style="color: white; margin: 5vh 1vw;">
+              web devices
+            </h3> 
+            <div class="justify-content-center" style="display: flex;">
+              <div class="col-md-4">
+                <img src="../img/habitia/Habitia_web_croped.gif" class="img-fluid">
+              </div><!-- col-->
+              <div class="col-md-2">
+                <img src="../img/habitia/Habitia_mobile_croped.gif" class="img-fluid">
+              </div><!-- col-->
+            </div>
+          </div><!-- col -->
+          <div class="col-md-12 foot" style="text-align: center; color: white;">
+            <img src="../img/logo-pong-white.png" class="img-fluid" style="width: 15%;">
+            <p>Eje Central 555, <b>Narvarte</b>, CDMX</p>
+            <p>55 · 3099 · 6403 | 55 · 6588 · 3697</p>
+            <p>ping@pong.com.mx</p>
+          </div>
+        </div><!-- row -->
+      </div><!-- container -->
+  </body>        

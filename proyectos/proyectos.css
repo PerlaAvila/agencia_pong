@@ -1,0 +1,616 @@
+/*ESTILOS DEL MODAL*/
+.back{
+  background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.pic{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pic > img{
+  width: 70%;
+}
+
+.proyectos{
+  padding: 20px;
+  text-align: center;
+}
+
+h6{
+  padding-top: 30px;
+  text-transform: uppercase;
+}
+
+.proyect-title{
+    text-align: center;
+    padding: 5%;
+    font-size: 6vh;
+    font-weight: 400;
+    width: 100%;
+}
+
+.barrita{
+	width: 70vw;
+	max-height: 100%;
+	background-color: #ededed;
+}
+.info{
+	text-transform: uppercase;
+	color: #999999;
+}
+
+
+.foot{
+  background: rgba(255,0,149,1);
+  background: -moz-linear-gradient(left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,0,149,1)), color-stop(100%, rgba(84,78,255,1)));
+  background: -webkit-linear-gradient(left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 100%);
+  background: -o-linear-gradient(left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 100%);
+  background: -ms-linear-gradient(left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 100%);
+  background: linear-gradient(to right, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0095', endColorstr='#544eff', GradientType=1 );
+}
+
+
+.description{
+  display: flex;
+  background: rgba(239,1,124,1);
+  background: -moz-linear-gradient(left, rgba(239,1,124,1) 0%, rgba(130,47,224,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(239,1,124,1)), color-stop(100%, rgba(130,47,224,1)));
+  background: -webkit-linear-gradient(left, rgba(239,1,124,1) 0%, rgba(130,47,224,1) 100%);
+  background: -o-linear-gradient(left, rgba(239,1,124,1) 0%, rgba(130,47,224,1) 100%);
+  background: -ms-linear-gradient(left, rgba(239,1,124,1) 0%, rgba(130,47,224,1) 100%);
+  background: linear-gradient(to right, rgba(239,1,124,1) 0%, rgba(130,47,224,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6ff', endColorstr='#43e0cb', GradientType=1 );
+  background-size: 100% 1px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 5vh;
+}
+
+.title-proyect{
+  width: 50%;
+  font-size: 12vh;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+
+.blue-title{
+  width: 50%;
+  float: right;
+  padding-left: 20%;
+  position: relative;
+  top: 50%;
+  margin-bottom: 0;
+  transform: translateY(50%);
+  font-size: 3.5vh;
+  color: #5655FB;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+
+div > .h5{
+  margin-top: 4vh;
+  font-size: 4vh;
+  color: #444444;
+  text-transform: capitalize;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.parrafo{
+  font-size: 20px;
+  font-weight: 100;
+
+}
+
+.navbars{
+      position: absolute;
+    z-index: 101;
+    display: flex;
+    width: 100%;
+}
+.navbars > div{
+    width: 50%;
+}
+
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Montserrat', serif;
+}
+
+.er{
+  display: none;
+  float: right;
+  color: #ff0095;
+  font-size: 30px;
+  font-weight: 900;
+  margin: 35px;
+  border: 1px solid;
+  padding: 0px 13px 7px;
+  line-height: 30px;
+}
+
+.me{
+  float: right;
+  margin: 35px;
+  color: #554eff;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: 100;
+  background-image: rgba(84,78,255,1);
+  background-image: -moz-linear-gradient(left, rgba(84,78,255,1) 0%, rgba(239,1,124,1) 100%);
+  background-image: -webkit-gradient(left top, right top, color-stop(0%, rgba(84,78,255,1)), color-stop(100%, rgba(239,1,124,1)));
+  background-image: -webkit-linear-gradient(left, rgba(84,78,255,1) 0%, rgba(239,1,124,1) 100%);
+  background-image: -o-linear-gradient(left, rgba(84,78,255,1) 0%, rgba(239,1,124,1) 100%);
+  background-image: -ms-linear-gradient(left, rgba(84,78,255,1) 0%, rgba(239,1,124,1) 100%);
+  background-image: linear-gradient(to right, rgba(84,78,255,1) 0%, rgba(239,1,124,1) 100%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 10px;
+  transition: all .5s ease-in-out;
+}
+
+.me:hover{
+ letter-spacing: 6px;
+}
+
+
+.overlay {
+  position: fixed;
+  background: rgba(6,4,13,1);
+background: -moz-linear-gradient(top, rgba(6,4,13,1) 0%, rgba(6,4,13,1) 1%, rgba(32,21,71,1) 29%, rgba(53,31,128,1) 50%, rgba(76,126,212,1) 78%, rgba(204,75,195,1) 97%, rgba(235,23,203,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(6,4,13,1)), color-stop(1%, rgba(6,4,13,1)), color-stop(29%, rgba(32,21,71,1)), color-stop(50%, rgba(53,31,128,1)), color-stop(78%, rgba(76,126,212,1)), color-stop(97%, rgba(204,75,195,1)), color-stop(100%, rgba(235,23,203,1)));
+background: -webkit-linear-gradient(top, rgba(6,4,13,1) 0%, rgba(6,4,13,1) 1%, rgba(32,21,71,1) 29%, rgba(53,31,128,1) 50%, rgba(76,126,212,1) 78%, rgba(204,75,195,1) 97%, rgba(235,23,203,1) 100%);
+background: -o-linear-gradient(top, rgba(6,4,13,1) 0%, rgba(6,4,13,1) 1%, rgba(32,21,71,1) 29%, rgba(53,31,128,1) 50%, rgba(76,126,212,1) 78%, rgba(204,75,195,1) 97%, rgba(235,23,203,1) 100%);
+background: -ms-linear-gradient(top, rgba(6,4,13,1) 0%, rgba(6,4,13,1) 1%, rgba(32,21,71,1) 29%, rgba(53,31,128,1) 50%, rgba(76,126,212,1) 78%, rgba(204,75,195,1) 97%, rgba(235,23,203,1) 100%);
+background: linear-gradient(to bottom, rgba(6,4,13,1) 0%, rgba(6,4,13,1) 1%, rgba(32,21,71,1) 29%, rgba(53,31,128,1) 50%, rgba(76,126,212,1) 78%, rgba(204,75,195,1) 97%, rgba(235,23,203,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06040d', endColorstr='#eb17cb', GradientType=0 );
+top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: scroll;
+}
+.overlay.open {
+  opacity: 1;
+    visibility: visible;
+    height: 100%;
+    z-index: 99;
+    width: 102%;
+}
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  text-align: center;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: .35s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+/*form styles*/
+#msform {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+  background: transparent;
+  border: 0 none;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  
+  /*fieldsets arriba uno de otro*/
+  position: relative;
+}
+/*Esconder y sólamente mostrar el primer0*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+  padding: 15px 0 0;
+    border: none;
+    margin-bottom: 30px;
+    width: 100%;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 2vh;
+    background-color: transparent;
+    border-bottom: 1px solid #ff0084;
+}
+
+.options{
+
+}
+
+#msform p {
+ 
+ font-size: 3.5vh;
+ font-weight: 600;
+ color: white;
+ text-align: left;
+}
+label{
+  color: #00f9ae;   
+  text-transform: uppercase;   
+  font-weight: 600;   
+  letter-spacing: 3px;   
+  background: linear-gradient( to left, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) top no-repeat, linear-gradient( to right, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(0,249,174,1) 0, rgba(0,249,174,1) ) left no-repeat, linear-gradient( to bottom, rgba(0,249,174,1) 0, rgba(0,249,174,1)) right no-repeat;
+  background: -moz-linear-gradient( to left, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) top no-repeat, linear-gradient( to right, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(0,249,174,1) 0, rgba(0,249,174,1) ) left no-repeat, linear-gradient( to bottom, rgba(0,249,174,1) 0, rgba(0,249,174,1)) right no-repeat;
+  background: -webkit-linear-gradient( to left, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) top no-repeat, linear-gradient( to right, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(0,249,174,1) 0, rgba(0,249,174,1) ) left no-repeat, linear-gradient( to bottom, rgba(0,249,174,1) 0, rgba(0,249,174,1)) right no-repeat;
+  background: -o-linear-gradient( to left, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) top no-repeat, linear-gradient( to right, rgba(0,249,174,1) 0%, rgba(77,167,247,1) 60%, rgba(76,166,245,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(0,249,174,1) 0, rgba(0,249,174,1) ) left no-repeat, linear-gradient( to bottom, rgba(0,249,174,1) 0, rgba(0,249,174,1)) right no-repeat;
+  background-repeat: no-repeat;   
+  background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%; 
+  transition: all .25s ease-in-out;
+  padding: 15px 25px;
+  margin: 10px 15px;
+  width: 100%;
+}
+.action-button{
+  text-transform: uppercase; 
+  text-fill-color: #ff0084 !important;
+  -webkit-text-fill-color: #ff0084 !important;
+  -ms-text-fill-color: #ff0084 !important;
+  -moz-text-fill-color: #ff0084 !important;
+  font-weight: 600;   
+  letter-spacing: 3px;   
+  background: rgba(255,0,149,1);
+  border-bottom: none  !important;
+  background: linear-gradient( to left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) top no-repeat, linear-gradient( to right, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(255,0,149,1) 0, rgba(255,0,149,1) ) left no-repeat, linear-gradient( to bottom, rgba(255,0,149,1) 0, rgba(255,0,149,1)) right no-repeat;
+  background: -moz-linear-gradient( to left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) top no-repeat, linear-gradient( to right, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(255,0,149,1) 0, rgba(255,0,149,1) ) left no-repeat, linear-gradient( to bottom, rgba(255,0,149,1) 0, rgba(255,0,149,1)) right no-repeat;
+  background: -webkit-linear-gradient( to left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) top no-repeat, linear-gradient( to right, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(255,0,149,1) 0, rgba(255,0,149,1) ) left no-repeat, linear-gradient( to bottom, rgba(255,0,149,1) 0, rgba(255,0,149,1)) right no-repeat;
+  background: -o-linear-gradient( to left, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) top no-repeat, linear-gradient( to right, rgba(255,0,149,1) 0%, rgba(84,78,255,1) 60%, rgba(84,78,255,1) 100%) bottom no-repeat, linear-gradient( to top, rgba(255,0,149,1) 0, rgba(255,0,149,1) ) left no-repeat, linear-gradient( to bottom, rgba(0,249,174,1) 0, rgba(0,249,174,1)) right no-repeat;
+  background-repeat: no-repeat;   
+  background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%; 
+  transition: all .25s ease-in-out;
+  padding: 15px !important;
+  margin: 10px 15px;
+  width: 35% !important;
+}
+
+.action-button:hover{
+  background-size: 0% 1px, 80% 1px, 1px 0%, 1px 0%;
+}
+
+#msform input:focus{
+  outline: none;
+}
+
+
+#names{
+  text-fill-color: #a6a5a3 !important;
+    -webkit-text-fill-color: #a6a5a3 !important;
+    -ms-text-fill-color: #a6a5a3 !important;
+    -moz-text-fill-color: #a6a5a3 !important;
+}
+/*buttons*/
+
+
+#msform .action-button:hover, #msform .action-button:focus {
+  letter-spacing: 1px;
+  background-size: 0% 1px, 80% 1px, 1px 0%, 1px 0%;
+}
+/***************/
+
+
+
+
+#msforms {
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msforms fieldset {
+  background: transparent;
+  border: 0 none;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  
+  /*fieldsets arriba uno de otro*/
+  position: relative;
+}
+/*Esconder y sólamente mostrar el primer0*/
+#msforms fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msforms input, #msforms textarea {
+  padding: 15px 0 0;
+    border: none;
+    margin-bottom: 30px;
+    width: 100%;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 2vh;
+    background-color: transparent;
+    border-bottom: 1px solid #ff0084;
+}
+
+.options{
+
+}
+
+#msforms p {
+ font-size: 3.5vh;
+ font-weight: 600;
+ color: white;
+ text-align: left;
+}
+#msforms input:focus{
+  outline: none;
+}
+
+
+
+
+#msforms .action-button:hover, #msforms .action-button:focus {
+  letter-spacing: 1px;
+  background-size: 0% 1px, 80% 1px, 1px 0%, 1px 0%;
+}
+#thanks{
+  font-size: 5vh;
+  color: white;
+  text-align: left;
+  padding: 10%;
+}
+
+
+
+
+/*titulos*/
+.fs-title {
+  text-align: left;
+  font-size: 4vh;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+/* esconder los checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* si está chechineada */
+input[type="checkbox"]:checked + label {
+ 
+  background-color: #e10189;
+  border-bottom: 1px solid white;
+  color: white;
+  background-size: 0%;
+}
+
+/* styles when hovering over options */
+label:hover {
+ background-size: 0% 1px, 80% 1px, 1px 0%, 1px 0%;
+  letter-spacing: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ícono para back to top*/
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#btn-primary {
+    
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#btn-primary:hover {
+ background-color: transparent;
+ border-color: transparent;
+}
+
+#btn-primary:active:focus {
+ background-color: transparent;
+ border-color: transparent;
+}
+
+
+
+.loader {
+  position: absolute;
+  width: 105px;
+  left: calc(50% - 52px);
+  top: calc(50% - 52px);
+  animation: fadeIn 2s;
+}
+
+.loader-ring {
+  background: url(../img/planetita.png) no-repeat center center;
+  background-size: 95px 95px;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+}
+
+.rocket-wrapper {
+  position: absolute;
+  left: 34px;
+  top: -30px;
+  height: 200px;
+}
+
+.rocket {
+  width: 37px;
+  height: auto;
+}
+
+.trail-wrapper {
+  position: absolute;
+  top: 78px;
+  left: 13px;
+  width: 12px;
+  height: 44px;
+  transform: none;
+  transform-origin: top center;
+  z-index: -1;
+}
+
+.trail {
+  width: 12px;
+  height: auto;
+  transform: translateZ(0);
+  animation: jet 0.02s ease alternate infinite;
+  transform-origin: top center;
+}
+
+.clouds-wrapper {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 88px;
+  height: 85px;
+}
+
+.clouds {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92px;
+}
+
+.cloud {
+  animation: kaboom 0.4s ease alternate infinite;
+  transform-origin: center center;
+  opacity: 0.9;
+}
+.cloud:nth-child(odd) {
+  animation: kaboom 0.3s ease alternate infinite;
+}
+.cloud:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.cloud:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.cloud:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.cloud:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.cloud:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.cloud:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.cloud:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes kaboom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes jet {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+

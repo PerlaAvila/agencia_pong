@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=""/>
+    <link href="stylesheets/main.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
+  </head>
+  <body>
+    <div class="frame">
+
+  <div class="loader">
+
+    <div class="loader-ring"></div>
+    
+    <div class="rocket-wrapper">
+      <div class="trail-wrapper">
+        <img src="rerocket/Loader_Fire.png" alt="" class="trail" />
+      </div>
+      <img src="rerocket/Loader__Rocket.png" alt="" class="rocket" />
+    </div>
+    
+    <div class="clouds-wrapper">
+      
+      <svg class="clouds" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 90.83">
+        <defs>
+          <clipPath id="clip-path" transform="translate(1.75)">
+            <circle cx="42.5" cy="42.5" r="42.5" fill="none" />
+          </clipPath>
+          <filter id="goo" color-interpolation-filters="sRGB">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -11" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+          <filter id="blurMe">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0.9" />
+          </filter>
+        </defs>
+        <g clip-path="url(#clip-path)" fill="blue" filter="url(#goo)">
+          <g class="clouds-wrapper" filter="url(#blurMe)">
+            <ellipse class="cloud" cx="40" cy="61.83" rx="7" ry="7" />
+            <ellipse class="cloud" cx="81" cy="68.83" rx="8" ry="8" />
+            <ellipse class="cloud" cx="6" cy="63.83" rx="6" ry="6"/>
+            <ellipse class="cloud" cx="15" cy="70.83" rx="11" ry="11"  />
+            <ellipse class="cloud" cx="65" cy="74.83" rx="11" ry="11"  />
+            <ellipse class="cloud" cx="48" cy="71.83" rx="14" ry="14" />
+            <ellipse class="cloud" cx="34" cy="75.83" rx="16" ry="16" />
+          </g>
+        </g>
+      </svg>
+      
+    </div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript">
+      var tl = new TimelineMax({repeat: -1, repeatDelay: 0});
+
+      tl.from('.cloud', 1, {alpha: 0})
+        .to('.rocket-wrapper', 3, { y: -400, ease:Expo.easeIn })
+        .to('.cloud', 3, { attr:{ cy: 185}, ease:Expo.easeIn }, "-=3")
+        .set('.cloud', {clearProps:"all"})
+        .set('.rocket-wrapper', { y: 450 })
+        .to('.rocket-wrapper', 4, { y:0, ease:Elastic.easeOut.config(0.5, 0.4) })
+        .to('.trail-wrapper', 2.5, { scaleX:0.5, scaleY:0, alpha:0, ease:Expo.easeOut }, "-=2.0")
+
+        console.log('exito');
+    </script>
+  </body>
+</html>
